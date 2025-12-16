@@ -1,0 +1,129 @@
+{% load static %}
+{% include 'includes/header.html' %}
+
+<!-- start page-title -->
+<section class="wpo-page-title page-title-6940286f9024c default-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="wpo-breadcumb-wrap">
+                    <h2>Brides &amp; Grooms</h2>
+                    <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                        <ul class="breadcrumb wpo-breadcumb-wrap trail-items">
+                            <li class="trail-item trail-begin"><a href="{% url 'home' %}" rel="home"><span>Home</span></a></li>
+                            <li class="trail-item trail-end"><span>Brides &amp; Grooms</span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+    <div class="shape-1">
+        <img src="{% static 'images/title-shape-1.png' %}" alt="title-shape-1">
+    </div>
+    <div class="shape-2">
+        <img src="{% static 'images/title-shape-2.png' %}" alt="title-shape-2">
+    </div>
+</section>
+<!-- end page-title -->
+
+<div class="wpo-section-area">
+    <div class="container">
+        <div class="wpo-section-title">
+            <h2 class="poort-text poort-in-right">Special Guests</h2>
+            <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+        </div>
+    </div>
+</div>
+
+<div class="wpo-team-section">
+    <div class="container">
+        <div class="wpo-team-wrap">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-team-item wow fadeInUp" data-wow-duration="0.1s">
+                        <div class="wpo-team-img">
+                            <div class="wpo-team-img-inner">
+                                <img src="{% static 'images/team-img-1.jpg' %}" alt="team">
+                            </div>
+                        </div>
+                        <div class="wpo-team-text">
+                            <h3><a href="{% url 'planner_single' %}">Jenny Wilson</a></h3>
+                            <span>Dress Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-team-item wow fadeInUp" data-wow-duration="0.2s">
+                        <div class="wpo-team-img">
+                            <div class="wpo-team-img-inner">
+                                <img src="{% static 'images/team-img-2.jpg' %}" alt="team">
+                            </div>
+                        </div>
+                        <div class="wpo-team-text">
+                            <h3><a href="{% url 'planner_single' %}">Robert Fox</a></h3>
+                            <span>Wedding Planner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-team-item wow fadeInUp" data-wow-duration="0.3s">
+                        <div class="wpo-team-img">
+                            <div class="wpo-team-img-inner">
+                                <img src="{% static 'images/team-img-3.jpg' %}" alt="team">
+                            </div>
+                        </div>
+                        <div class="wpo-team-text">
+                            <h3><a href="{% url 'planner_single' %}">Annette Black</a></h3>
+                            <span>Planner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-team-item wow fadeInUp" data-wow-duration="0.4s">
+                        <div class="wpo-team-img">
+                            <div class="wpo-team-img-inner">
+                                <img src="{% static 'images/team-img-4.jpg' %}" alt="team">
+                            </div>
+                        </div>
+                        <div class="wpo-team-text">
+                            <h3><a href="{% url 'planner_single' %}">Jerome Bell</a></h3>
+                            <span>Assistant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wpo-partners-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="partner-grids partners-slider owl-carousel">
+                    <div class="grid">
+                        <img src="{% static 'images/partner-1.png' %}" alt="partner-1">
+                    </div>
+                    <div class="grid">
+                        <img src="{% static 'images/partner-2.png' %}" alt="partner-2">
+                    </div>
+                    <div class="grid">
+                        <img src="{% static 'images/partner-3.png' %}" alt="partner-3">
+                    </div>
+                    <div class="grid">
+                        <img src="{% static 'images/partner-4.png' %}" alt="partner-4">
+                    </div>
+                    <div class="grid">
+                        <img src="{% static 'images/partner-5.png' %}" alt="partner-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'includes/footer.html' %}

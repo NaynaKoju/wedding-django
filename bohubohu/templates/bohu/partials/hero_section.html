@@ -1,0 +1,25 @@
+{% for hero in hero_sections %}
+<section class="bohu-hero" style="position: relative; padding: 180px 0 100px; overflow: hidden; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ hero.background_image.url }}'); background-size: cover; background-position: center; color: white;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="hero-content">
+          <h1 class="display-1 fw-light mb-2" style="letter-spacing: 3px; line-height: 1.1;">{{ hero.title_main }}</h1>
+          <h1 class="display-1 fw-light mb-4" style="letter-spacing: 3px; line-height: 1.1;">{{ hero.title_sub }}</h1>
+          <p class="lead mb-4" style="font-size: 1.25rem; max-width: 600px;">
+            {{ hero.lead_text|safe }}
+          </p>
+          <div class="hero-circle mt-5">
+            <div style="width: 180px; height: 180px; border: 2px solid rgba(212, 165, 116, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+              <span style="color: #d4a574; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">{{ hero.circle_text }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-end">
+        <img src="{{ hero.hero_image.url }}" alt="Hero" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}

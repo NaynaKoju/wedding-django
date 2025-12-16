@@ -1,0 +1,13 @@
+<section class="couple-section section-padding">
+  <div class="container">
+    <div class="row">
+      {% for person in couples %}
+      <div class="col-lg-6 text-center mb-4 wow fadeInUp" data-wow-duration="1000ms">
+        <img src="{{ person.image.url }}" alt="{{ person.name }}" class="img-fluid rounded-circle mb-3">
+        <h3>{{ person.name }}</h3>
+        <p>{{ person.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

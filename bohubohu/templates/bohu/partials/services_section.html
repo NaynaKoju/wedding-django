@@ -1,0 +1,21 @@
+<section class="bohu-services section-padding">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Our Services</h2>
+      <p>We offer a variety of wedding services to make your special day perfect.</p>
+    </div>
+    <div class="row">
+      {% for service in services %}
+      <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-duration="1000ms">
+        <div class="service-item text-center p-4 rounded shadow-sm">
+          {% if service.icon_class %}
+          <i class="{{ service.icon_class }} service-icon mb-3"></i>
+          {% endif %}
+          <h4 class="mb-2">{{ service.title }}</h4>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

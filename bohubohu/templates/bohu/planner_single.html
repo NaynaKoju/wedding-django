@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenny Wilson - Bohu Wedding Planner</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <!-- Page Title -->
+    <section class="wpo-page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="wpo-breadcumb-wrap">
+                        <h2>Team Single</h2>
+                        <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                            <ul class="breadcrumb wpo-breadcumb-wrap trail-items">
+                                <li class="trail-item trail-begin"><a href="{% url 'home' %}" rel="home"><span>Home</span></a></li>
+                                <li class="trail-item"><a href="{% url 'planners' %}"><span>Team</span></a></li>
+                                <li class="trail-item trail-end"><span>Jenny Wilson</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-1">
+            <img src="{% static 'images/title-shape-1.png' %}" alt="title-shape-1">
+        </div>
+        <div class="shape-2">
+            <img src="{% static 'images/title-shape-2.png' %}" alt="title-shape-2">
+        </div>
+    </section>
+
+    <!-- Team Info Section -->
+    <section class="team-pg-area section-padding">
+        <div class="container-fluid">
+            <div class="team-info-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="team-info-img">
+                            <img src="{% static 'images/planner-single1.jpg' %}" alt="planner-single1">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team-info-text">
+                            <h2 class="poort-text poort-in-right">Jenny Wilson</h2>
+                            <ul>
+                                <li><span>Position: </span><span>Planner</span></li>
+                                <li><span>Planner Service: </span><span>Photography, Wedding Ceremony</span></li>
+                                <li><span>Experience:</span><span> 12 Years</span></li>
+                                <li><span>Address: </span><span>Millington, Ave, TN 38053</span></li>
+                                <li><span>Phone: </span><span>+00 568 746 987</span></li>
+                                <li><span>Email:</span><span> youremail@gmail.com</span></li>
+                                <li><span>Fax: </span><span>568 746 987</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Experience Section -->
+    <section class="elementor-element">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Personal Experience</h2>
+                    <p>As a wedding planner, I've witnessed countless brides step into that life-changing moment — when they find the dress that truly completes their dream wedding. Every time, it's the same beautiful reaction: a soft smile, teary eyes, and a quiet realization that this is the gown they'll walk down the aisle in.</p>
+                    <p>Seeing that transformation is one of my favorite parts of the entire planning journey. It reminds me that the perfect dress isn't just about fashion; it's about emotion, confidence, and the magic of becoming a bride.</p>
+                    <p>After years of planning weddings, I can always tell when a bride has found her dress. Her posture changes, her eyes light up, and suddenly the entire wedding vision comes together.</p>
+                    <p>One of my brides once said, "This dress feels like the moment I say yes all over again."</p>
+                    <p>Moments like these make me love what I do — helping brides discover the bridal dress that completes the dream they've imagined for so long.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Info Section -->
+    <section class="elementor-element">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Professional Info.</h2>
+                    <p>Planning weddings has taught me that the perfect gown is more than a detail — it's the heart of the day's story. When a bride finds her dress, the entire vision becomes clear: the colors, the flowers, the atmosphere.</p>
+                    <p>It's incredible to watch her glow with confidence and joy. As a planner, helping brides reach that moment is one of the most rewarding parts of my work.</p>
+                    <p>I've guided many brides through the dress-shopping experience, and every journey feels uniquely special. Some walk in nervous, others excited, but when the right dress appears, everything shifts. I once watched a bride twirl slowly in front of the mirror, completely silent. A few seconds later, she whispered, "I feel like a bride." That was the moment we all wait for — the moment she discovers the bridal dress that completes her dream wedding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Skills Section -->
+    <section class="elementor-element">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Professional Skills</h2>
+                    <div class="skill-item">
+                        <span class="skill-title">Fashion Design</span>
+                        <div class="progress-wrapper">
+                            <div class="elementor-progress-bar" data-max="85">
+                                <span class="elementor-progress-text"></span>
+                                <span class="elementor-progress-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-title">Decoration</span>
+                        <div class="progress-wrapper">
+                            <div class="elementor-progress-bar" data-max="80">
+                                <span class="elementor-progress-text"></span>
+                                <span class="elementor-progress-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-title">Interior Design</span>
+                        <div class="progress-wrapper">
+                            <div class="elementor-progress-bar" data-max="95">
+                                <span class="elementor-progress-text"></span>
+                                <span class="elementor-progress-percentage">95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-title">Dress Design</span>
+                        <div class="progress-wrapper">
+                            <div class="elementor-progress-bar" data-max="70">
+                                <span class="elementor-progress-text"></span>
+                                <span class="elementor-progress-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-title">Photography</span>
+                        <div class="progress-wrapper">
+                            <div class="elementor-progress-bar" data-max="88">
+                                <span class="elementor-progress-text"></span>
+                                <span class="elementor-progress-percentage">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="bohu-rsvp-form wpo-contact-pg-section">
+        <div class="wpo-contact-form-wrapper">
+            <div class="wpo-contact-form-area">
+                <form method="post" class="wpcf7-form">
+                    {% csrf_token %}
+                    <div>
+                        <input size="40" class="wpcf7-form-control wpcf7-text form-control" placeholder="Your Name*" type="text" name="name" required>
+                    </div>
+                    <div>
+                        <input size="40" class="wpcf7-form-control wpcf7-email form-control" placeholder="Your Email*" type="email" name="email" required>
+                    </div>
+                    <div>
+                        <input size="40" class="wpcf7-form-control wpcf7-text form-control" placeholder="Address" type="text" name="address">
+                    </div>
+                    <div>
+                        <select class="wpcf7-form-control wpcf7-select form-control" name="services">
+                            <option value="Services">Services</option>
+                            <option value="Photography">Photography</option>
+                            <option value="The Rehearsal Dinner">The Rehearsal Dinner</option>
+                            <option value="The Afterparty">The Afterparty</option>
+                            <option value="Videographers">Videographers</option>
+                            <option value="Perfect Cake">Perfect Cake</option>
+                            <option value="All Of The Above">All Of The Above</option>
+                        </select>
+                    </div>
+                    <div class="fullwidth">
+                        <textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" placeholder="Message..." name="message" required></textarea>
+                    </div>
+                    <div class="submit-area">
+                        <input class="wpcf7-form-control wpcf7-submit theme-btn" type="submit" value="Get in Touch">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="wpo-partners-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="partner-grids partners-slider owl-carousel">
+                        <div class="grid">
+                            <img src="{% static 'images/partner-1.png' %}" alt="partner-1">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-2.png' %}" alt="partner-2">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-3.png' %}" alt="partner-3">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-4.png' %}" alt="partner-4">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-5.png' %}" alt="partner-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

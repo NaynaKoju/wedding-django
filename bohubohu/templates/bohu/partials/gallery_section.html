@@ -1,0 +1,13 @@
+<section class="gallery-section section-padding bg-light">
+  <div class="container-fluid">
+    <div class="row g-2">
+      {% for image in gallery_images %}
+      <div class="col-lg-4 col-md-6 mb-3 wow fadeInUp" data-wow-duration="1000ms">
+        <a href="{{ image.image.url }}" class="fancybox" data-fancybox="gallery">
+          <img src="{{ image.image.url }}" alt="{{ image.title }}" class="img-fluid rounded">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

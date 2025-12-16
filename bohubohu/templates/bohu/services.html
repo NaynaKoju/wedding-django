@@ -1,0 +1,121 @@
+{% load static %}
+{% include 'includes/header.html' %}
+
+<!-- start page-title -->
+<section class="wpo-page-title page-title-694028fad9ddd default-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="wpo-breadcumb-wrap">
+                    <h2>Services</h2>
+                    <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                        <ul class="breadcrumb wpo-breadcumb-wrap trail-items">
+                            <li class="trail-item trail-begin">
+                                <a href="{% url 'home' %}" rel="home"><span>Home</span></a>
+                            </li>
+                            <li class="trail-item trail-end"><span>Services</span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape-1">
+        <img src="{% static 'images/title-shape-1.png' %}" alt="title-shape-1">
+    </div>
+    <div class="shape-2">
+        <img src="{% static 'images/title-shape-2.png' %}" alt="title-shape-2">
+    </div>
+</section>
+<!-- end page-title -->
+
+<div class="wpo-section-area">
+    <div class="container">
+        <div class="wpo-section-title">
+            <h2 class="poort-text poort-in-right">Our Awesome Services For You</h2>
+            <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+        </div>
+    </div>
+</div>
+
+<section class="bohu-services wpo-service-section">
+    <div class="container-fluid">
+        <div class="wpo-service-wrap">
+            <div class="row">
+                <!-- Service Item 1 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-service-item wow fadeInUp" data-wow-duration="1000ms">
+                        <div class="wpo-service-img">
+                            <div class="wpo-service-img-inner">
+                                <img src="{% static 'images/service-image-1.jpg' %}" alt="Wedding Dress">
+                            </div>
+                        </div>
+                        <div class="wpo-service-text">
+                            <h3>Wedding Dress</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Item 2 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-service-item wow fadeInUp" data-wow-duration="1200ms">
+                        <div class="wpo-service-img">
+                            <div class="wpo-service-img-inner">
+                                <img src="{% static 'images/service-image-2.jpg' %}" alt="Bridal Bouquets">
+                            </div>
+                        </div>
+                        <div class="wpo-service-text">
+                            <h3>Bridal Bouquets</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Item 3 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-service-item wow fadeInUp" data-wow-duration="1400ms">
+                        <div class="wpo-service-img">
+                            <div class="wpo-service-img-inner">
+                                <img src="{% static 'images/service-image-3.jpg' %}" alt="Cake Decoration">
+                            </div>
+                        </div>
+                        <div class="wpo-service-text">
+                            <h3>Cake Decoration</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Item 4 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+                    <div class="wpo-service-item wow fadeInUp" data-wow-duration="1600ms">
+                        <div class="wpo-service-img">
+                            <div class="wpo-service-img-inner">
+                                <img src="{% static 'images/service-image-4.jpg' %}" alt="Event Planning">
+                            </div>
+                        </div>
+                        <div class="wpo-service-text">
+                            <h3>Event Planning</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="wpo-partners-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="partner-grids partners-slider owl-carousel">
+                    <div class="grid"><img src="{% static 'images/partner-1.png' %}" alt="partner-1"></div>
+                    <div class="grid"><img src="{% static 'images/partner-2.png' %}" alt="partner-2"></div>
+                    <div class="grid"><img src="{% static 'images/partner-3.png' %}" alt="partner-3"></div>
+                    <div class="grid"><img src="{% static 'images/partner-4.png' %}" alt="partner-4"></div>
+                    <div class="grid"><img src="{% static 'images/partner-5.png' %}" alt="partner-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'includes/footer.html' %}

@@ -1,0 +1,404 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bohu Wedding Planner</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>About Us</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-3">
+                    <div class="about-image">
+                        <img src="{% static 'images/ab-image-1.jpg' %}" alt="About Image">
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    <div class="about-content">
+                        <p>Bohu is a full-service wedding planning agency dedicated to creating unforgettable celebrations that beautifully reflect each couple's unique love story. From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+                        <div class="about-info">
+                            <h5>Kristin Watson</h5>
+                            <span>- CEO of the company</span>
+                        </div>
+                        <div class="about-signature">
+                            <img src="{% static 'images/signature.png' %}" alt="Signature">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-lg-1">
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content">
+                <h2>"You are my today and all of my tomorrows."</h2>
+                <p>Your smile is so gentle, yet powerful enough to light up the darkest corners of my soul. It carries warmth, hope, and a kind of magic the night sky could only dream of.</p>
+                <a href="#" class="btn btn-primary">Let's Celebrate Our Love</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video CTA Section -->
+    <section class="video-cta-section">
+        <div class="video-background">
+            <img src="{% static 'images/coming.jpg' %}" alt="Video Background">
+            <div class="video-overlay">
+                <a href="#" class="video-play-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" fill="none">
+                        <path d="M30.3422 13.4613L9.67032 0.71872C8.17475 -0.202014 6.36657 -0.240296 4.83334 0.616317C3.3001 1.47279 2.38477 3.03283 2.38477 4.78905V30.1581C2.38477 32.8136 4.52442 34.9856 7.15421 34.9999C7.16139 34.9999 7.16856 35 7.17561 35C7.99742 34.9999 8.85383 34.7423 9.65371 34.2543C10.2972 33.8617 10.5005 33.0218 10.108 32.3784C9.71537 31.7349 8.87536 31.5316 8.2321 31.9242C7.85797 32.1523 7.49259 32.2704 7.16891 32.2703C6.17667 32.2649 5.11429 31.4149 5.11429 30.1582V4.78912C5.11429 4.03573 5.50695 3.36669 6.16457 2.99926C6.82226 2.63183 7.59779 2.64824 8.23853 3.04274L28.9105 15.7853C29.5318 16.1678 29.8874 16.8057 29.8859 17.5354C29.8844 18.265 29.5262 18.9014 28.9015 19.2826L13.9556 28.4338C13.3127 28.8274 13.1106 29.6676 13.5043 30.3104C13.8978 30.9532 14.738 31.1553 15.3809 30.7617L30.325 21.6116C31.7558 20.7388 32.6121 19.2171 32.6155 17.5408C32.6189 15.8648 31.7688 14.3396 30.3422 13.4613Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Awesome Services For You</h2>
+                <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="{% static 'images/service-image-4.jpg' %}" alt="Event Planning">
+                        </div>
+                        <h3>Event Planning</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="{% static 'images/service-image-3.jpg' %}" alt="Cake Decoration">
+                        </div>
+                        <h3>Cake Decoration</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="{% static 'images/service-image-2.jpg' %}" alt="Bridal Bouquets">
+                        </div>
+                        <h3>Bridal Bouquets</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="{% static 'images/service-image-1.jpg' %}" alt="Wedding Dress">
+                        </div>
+                        <h3>Wedding Dress</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="section-title">
+                    <h2>Your presence will make our wedding day complete.</h2>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="guests">
+                            <option>Number Of Guests</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="meal">
+                            <option>Meal Preferences</option>
+                            <option>Chicken Soup</option>
+                            <option>Motton Kabab</option>
+                            <option>Chicken BBQ</option>
+                            <option>Mix Salad</option>
+                            <option>Beef Ribs</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container-fluid">
+            <div class="testimonials-wrapper">
+                <div class="testimonial-item">
+                    <p>"Planning a wedding felt overwhelming until we met Bohu. Their team took our ideas and transformed them into a celebration beyond what we could have imagined. Truly professional, creative, and supportive throughout the journey."</p>
+                    <h3>Wilson & Amanda</h3>
+                    <span>Wedding - 10.03.2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Expert Team Members</h2>
+                <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'images/team-img-1.jpg' %}" alt="Jenny Wilson">
+                        </div>
+                        <h3>Jenny Wilson</h3>
+                        <span>Dress Designer</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'images/team-img-2.jpg' %}" alt="Robert Fox">
+                        </div>
+                        <h3>Robert Fox</h3>
+                        <span>Wedding Planner</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'images/team-img-3.jpg' %}" alt="Annette Black">
+                        </div>
+                        <h3>Annette Black</h3>
+                        <span>Planner</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'images/team-img-4.jpg' %}" alt="Jerome Bell">
+                        </div>
+                        <h3>Jerome Bell</h3>
+                        <span>Assistant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Awesome Pricing Plan</h2>
+                <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                        <div class="pricing-header">
+                            <h4>Basic Package</h4>
+                            <h2>$150<span>/Monthly</span></h2>
+                        </div>
+                        <ul>
+                            <li>Stylish makeup for bride.</li>
+                            <li>Top label arrangement</li>
+                            <li>Amazing meal & breakfast</li>
+                            <li>Full body Polish</li>
+                            <li>Manicure Pedicure</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                        <div class="pricing-header">
+                            <h4>Standard Package</h4>
+                            <h2>$500<span>/Monthly</span></h2>
+                        </div>
+                        <ul>
+                            <li>Stylish makeup for bride.</li>
+                            <li>Top label arrangement</li>
+                            <li>Amazing meal & breakfast</li>
+                            <li>Full body Polish</li>
+                            <li>Manicure Pedicure</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="pricing-item">
+                        <div class="pricing-header">
+                            <h4>Luxury Package</h4>
+                            <h2>$750<span>/Monthly</span></h2>
+                        </div>
+                        <ul>
+                            <li>Stylish makeup for bride.</li>
+                            <li>Top label arrangement</li>
+                            <li>Amazing meal & breakfast</li>
+                            <li>Full body Polish</li>
+                            <li>Manicure Pedicure</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="fun-fact">
+                        <h3>3210+</h3>
+                        <p>Happy Couples</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fun-fact">
+                        <h3>230+</h3>
+                        <p>Location</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fun-fact">
+                        <h3>3320+</h3>
+                        <p>Wedding</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fun-fact">
+                        <h3>526+</h3>
+                        <p>Decoration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Special Products For You</h2>
+                <p>From intimate gatherings to grand luxury weddings, we bring together creativity, organization, and passion to design every detail with precision.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="{% static 'images/product-1.jpg' %}" alt="Stylish Designer Gown">
+                        </div>
+                        <h3>Stylish Designer Gown</h3>
+                        <span class="price">$800.00</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="{% static 'images/wedding-ring-single.jpg' %}" alt="Wedding Rings">
+                        </div>
+                        <h3>Wedding Rings</h3>
+                        <span class="price">$750.00</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="{% static 'images/product-2.jpg' %}" alt="Wedding Shoe">
+                        </div>
+                        <h3>Wedding Shoe</h3>
+                        <span class="price">$320.00</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="{% static 'images/product-3.jpg' %}" alt="Wedding Cake">
+                        </div>
+                        <h3>Wedding Cake</h3>
+                        <span class="price">$100.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-1.png' %}" alt="Partner 1">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-2.png' %}" alt="Partner 2">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-3.png' %}" alt="Partner 3">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-4.png' %}" alt="Partner 4">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-5.png' %}" alt="Partner 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+    {% include 'includes/scripts.html' %}
+</body>
+</html>

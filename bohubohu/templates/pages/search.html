@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Search</h1>
+    <form method="get" action="{% url 'search' %}" class="mb-5">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control form-control-lg" placeholder="Search..." value="{{ request.GET.q }}">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+    
+    <div class="search-results">
+        {% if request.GET.q %}
+            <h3>Search results for: "{{ request.GET.q }}"</h3>
+            <!-- Search results will go here -->
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'bohu/base.html' %}
+{% load static %}
+
+{% block title %}Coming Soon - Bohu{% endblock %}
+
+{% block content %}
+<div class="wpo-coming-soon-area" style="background-image: url('{% static 'images/coming.jpg' %}')">
+    <div class="hero-container">
+        <div class="hero-inner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="wpo-event-wrap">
+                            <div class="wpo-event-item">
+                                <div class="coming-soon-section">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <div class="coming-soon-text">
+                                                <h2>Coming Soon</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="wpo-wedding-date">
+                                                <h2 class="hidden">some</h2>
+                                                <div class="clock-grids">
+                                                    <div id="clock" data-date="2026-08-13 00:00"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="wpo-coming-contact">
+                                                <form method="post" class="coming-soon-form">
+                                                    {% csrf_token %}
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-lg-5 col-sm-6 col-12">
+                                                            <input type="text" name="name" class="form-control" placeholder="Name*" required>
+                                                        </div>
+                                                        <div class="col-lg-5 col-sm-6 col-12">
+                                                            <input type="email" name="email" class="form-control" placeholder="Email*" required>
+                                                        </div>
+                                                        <div class="col-lg-2 col-sm-4 col-6">
+                                                            <div class="submit-area">
+                                                                <button type="submit" class="submit-btn">Notify Me</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/countdown.js' %}"></script>
+<script>
+    jQuery(document).ready(function() {
+        /*------------------------------------------
+        = COUNTDOWN CLOCK
+    -------------------------------------------*/
+        if (jQuery("#clock").length) {
+            var weddingDate = jQuery('#clock').data('date');
+            jQuery('#clock').countdown(weddingDate, function(event) {
+                var $this = jQuery(this).html(event.strftime('' +
+                    '<div class="box"><div><div class="time">%D</div> <span>Days</span></div></div>' +
+                    '<div class="box"><div><div class="time">%H</div> <span>Hours</span></div></div>' +
+                    '<div class="box"><div><div class="time">%M</div> <span>Mins</span> </div></div>' +
+                    '<div class="box"><div><div class="time">%S</div> <span>Secs</span> </div></div>'));
+            });
+        }
+    });
+</script>
+{% endblock %}

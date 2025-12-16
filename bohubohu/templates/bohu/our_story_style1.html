@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Bohu Wedding</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="container">
+                <a href="{% url 'home' %}" class="logo">
+                    <img src="{% static 'images/logo.svg' %}" alt="Bohu Logo">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'our_story_style1' %}">Our Story</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Our Story</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item active">Our Story</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Story Gallery Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-slider">
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="image-left">
+                            <img src="{% static 'images/image-left-1.jpg' %}" alt="First Meeting">
+                        </div>
+                        <div class="text-content">
+                            <h2>First Time We Met</h2>
+                            <p>We met by chance at a coffee shop on a rainy afternoon. She was reading her favorite book, and I offered her the last available seat. What began as casual conversation quickly turned into hours of laughter neither of us expected.</p>
+                        </div>
+                        <div class="image-right">
+                            <img src="{% static 'images/image-right-1.jpg' %}" alt="First Meeting">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="image-left">
+                            <img src="{% static 'images/image-left-2.jpg' %}" alt="Love Started">
+                        </div>
+                        <div class="text-content">
+                            <h2>Where Love Started</h2>
+                            <p>We met by chance at a coffee shop on a rainy afternoon. She was reading her favorite book, and I offered her the last available seat. What began as casual conversation quickly turned into hours of laughter neither of us expected.</p>
+                        </div>
+                        <div class="image-right">
+                            <img src="{% static 'images/image-right-2.jpg' %}" alt="Love Started">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="image-left">
+                            <img src="{% static 'images/image-left-3.jpg' %}" alt="She Said Yes">
+                        </div>
+                        <div class="text-content">
+                            <h2>She Said Yes</h2>
+                            <p>We met by chance at a coffee shop on a rainy afternoon. She was reading her favorite book, and I offered her the last available seat. What began as casual conversation quickly turned into hours of laughter neither of us expected.</p>
+                        </div>
+                        <div class="image-right">
+                            <img src="{% static 'images/image-right-3.jpg' %}" alt="She Said Yes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners/Stickers Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-1.png' %}" alt="Partner 1">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-2.png' %}" alt="Partner 2">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-3.png' %}" alt="Partner 3">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-4.png' %}" alt="Partner 4">
+                </div>
+                <div class="partner-item">
+                    <img src="{% static 'images/partner-5.png' %}" alt="Partner 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>We can't wait to see all of our beloved friends and relatives at our wedding. Your presence will make our day truly special!</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'our_story_style1' %}">Story</a></li>
+                            <li><a href="{% url 'rsvp_style1' %}">RSVP</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contacts</h4>
+                        <ul>
+                            <li><a href="mailto:bohu@gmail.com">bohu@gmail.com</a></li>
+                            <li><a href="tel:+3165550116">+316555-0116</a></li>
+                            <li>4517 Washington Ave. Manchester, Kentucky 39495</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Copyright © <span>2025</span> | <a href="{% url 'home' %}">Bohu</a> | All Rights Reserved</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

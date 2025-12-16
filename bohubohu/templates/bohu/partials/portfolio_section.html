@@ -1,0 +1,23 @@
+<section class="bohu-portfolio section-padding">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Our Portfolio</h2>
+      <p>Some of our beautiful wedding moments and creations.</p>
+    </div>
+    <div class="portfolio-grids gallery-container clearfix portfolio-slide owl-carousel">
+      {% for item in portfolio_items %}
+      <div class="grid wow fadeInUp" data-wow-duration="1000ms">
+        <div class="img-holder">
+          <a href="{{ item.image.url }}" class="fancybox" data-fancybox-group="portfolio-group">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}" class="img img-responsive rounded">
+            <div class="hover-content">
+              <i class="ti-plus"></i>
+              <h5>{{ item.title }}</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

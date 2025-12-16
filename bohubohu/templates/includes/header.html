@@ -1,0 +1,156 @@
+{% load static %}
+<header id="header" class="header-builder">
+    <div class="wpo-custom-site-header wpo-site-header wpo-header-style-1">
+        <nav class="navigation navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                        <div class="mobail-menu">
+                            <button type="button" class="navbar-toggler open-btn">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar first-angle"></span>
+                                <span class="icon-bar middle-angle"></span>
+                                <span class="icon-bar last-angle"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Logo -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="{% url 'home' %}">
+                                <span class="logo-text">Bohu.</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Navigation -->
+                    <div class="col-lg-8 col-md-1 col-1">
+                        <div id="navbar" class="site-navbar collapse navbar-collapse navigation-holder">
+                            <button class="menu-close"><i class="ti-close"></i></button>
+                            <ul id="menu-main" class="nav navbar-nav mb-2 mb-lg-0">
+                                
+                                <!-- HOME -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="{% url 'home' %}">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'home' %}">Wedding Home Style 1</a></li>
+                                        <li><a href="{% url 'wedding_planner_style1' %}">Wedding Planner Style 1</a></li>
+                                        <li><a href="{% url 'wedding_shop_home' %}">Wedding Shop Home</a></li>
+                                        <li><a href="{% url 'wedding_invitation' %}">Wedding Invitation</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- PAGES -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="{% url 'about' %}">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li><a href="{% url 'our_story_style1' %}">Our Story</a></li>
+                                        <li><a href="{% url 'accommodation' %}">Accommodation</a></li>
+                                        <li><a href="{% url 'rsvp_style1' %}">RSVP</a></li>
+                                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                        <li><a href="{% url 'planners' %}">Planners</a></li>
+                                        <li><a href="{% url 'brides_grooms' %}">Brides & Grooms</a></li>
+                                        <li><a href="{% url 'services' %}">Service</a></li>
+                                        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                                        <li><a href="{% url 'coming_soon' %}">Coming Soon</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- PORTFOLIO -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="{% url 'portfolio_grid' %}">Portfolio</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'portfolio_grid' %}">Portfolio Grid</a></li>
+                                        <li><a href="{% url 'portfolio_single' 1 %}">Portfolio Single</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- SHOP -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="{% url 'shop' %}">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'shop' %}">Shop Page</a></li>
+                                        <li><a href="{% url 'product_single' 1 %}">Shop Single</a></li>
+                                        <li><a href="{% url 'cart' %}">Cart Page</a></li>
+                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- BLOG -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="{% url 'blog' %}">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'blog' %}">Blog Right Sidebar</a></li>
+                                        <li><a href="{% url 'blog_single' 1 %}">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- CONTACT -->
+                                <li class="menu-item">
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Header Right (Search & Cart) -->
+                    <div class="col-lg-2 col-md-2 col-2">
+                        <div class="header-right">
+                            <!-- Search -->
+                            <div class="header-search-form-wrapper">
+                                <div class="cart-search-contact">
+                                    <a href="#search-form" class="search-toggle-btn" aria-label="Open search">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Cart -->
+                            <div class="mini-cart">
+                                <button class="cart-toggle-btn" aria-label="Open cart">
+                                    <i class="ti-shopping-cart"></i>
+                                    <span class="cart-count">0</span>
+                                </button>
+                                <div class="mini-cart-content">
+                                    <button class="mini-cart-close"><i class="ti-close"></i></button>
+                                    <div class="mini-cart-title">
+                                        <p>Shopping Cart</p>
+                                    </div>
+                                    <div class="mini-cart-items">
+                                        <!-- Cart items will be loaded via AJAX -->
+                                    </div>
+                                    <div class="mini-cart-empty">
+                                        <p class="no-products">Your basket is empty!.</p>
+                                        <div class="cart-emty-icon">
+                                            <i class="fi ti-shopping-cart"></i>
+                                        </div>
+                                        <a href="{% url 'shop' %}" class="view-cart-btn s2">
+                                            Start Shopping
+                                        </a>
+                                    </div>
+                                    <div class="mini-cart-action clearfix">
+                                        <span class="mini-checkout-price">
+                                            Subtotal: 
+                                            <span>$0.00</span>
+                                        </span>
+                                        <a href="{% url 'checkout' %}" class="view-cart-btn s1">
+                                            Checkout
+                                        </a>
+                                        <a href="{% url 'cart' %}" class="view-cart-btn">
+                                            View Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

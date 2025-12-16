@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accomodation - Bohu Wedding Planner</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Accomodation</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active">Accomodation</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-wrap">
+                <div id="countdown" class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="number" id="days">00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">Mins</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Hero Section -->
+    <section class="couple-hero-section">
+        <div class="container-fluid">
+            <div class="couple-wrap">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="couple-item">
+                            <h2>Amanda Jenny</h2>
+                            <p>Today, I marry my best friend. With joy in my heart and love in my eyes, I'm ready for forever</p>
+                            <div class="couple-image">
+                                <img src="{% static 'images/couple-image-5.jpg' %}" alt="Amanda Jenny">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="couple-item">
+                            <h2>Max Wilson</h2>
+                            <p>A heart full of love and a soul full of hope, I can't wait to begin this journey with you by my side.</p>
+                            <div class="couple-image">
+                                <img src="{% static 'images/couple-image-4.jpg' %}" alt="Max Wilson">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-birds">
+                    <img src="{% static 'images/love-birds.svg' %}" alt="Love Birds">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video CTA Section -->
+    <section class="video-cta-section">
+        <div class="video-background">
+            <img src="{% static 'images/video.jpg' %}" alt="Video Background">
+            <div class="video-overlay">
+                <a href="#" class="video-play-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" fill="none">
+                        <path d="M30.3422 13.4613L9.67032 0.71872C8.17475 -0.202014 6.36657 -0.240296 4.83334 0.616317C3.3001 1.47279 2.38477 3.03283 2.38477 4.78905V30.1581C2.38477 32.8136 4.52442 34.9856 7.15421 34.9999C7.16139 34.9999 7.16856 35 7.17561 35C7.99742 34.9999 8.85383 34.7423 9.65371 34.2543C10.2972 33.8617 10.5005 33.0218 10.108 32.3784C9.71537 31.7349 8.87536 31.5316 8.2321 31.9242C7.85797 32.1523 7.49259 32.2704 7.16891 32.2703C6.17667 32.2649 5.11429 31.4149 5.11429 30.1582V4.78912C5.11429 4.03573 5.50695 3.36669 6.16457 2.99926C6.82226 2.63183 7.59779 2.64824 8.23853 3.04274L28.9105 15.7853C29.5318 16.1678 29.8874 16.8057 29.8859 17.5354C29.8844 18.265 29.5262 18.9014 28.9015 19.2826L13.9556 28.4338C13.3127 28.8274 13.1106 29.6676 13.5043 30.3104C13.8978 30.9532 14.738 31.1553 15.3809 30.7617L30.325 21.6116C31.7558 20.7388 32.6121 19.2171 32.6155 17.5408C32.6189 15.8648 31.7688 14.3396 30.3422 13.4613Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container-fluid">
+            <div class="gallery-wrap">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="gallery-item">
+                            <a href="{% static 'images/gallery-image-7.jpg' %}" data-lightbox="gallery">
+                                <img src="{% static 'images/gallery-image-7.jpg' %}" alt="Gallery Image 7">
+                                <div class="overlay">
+                                    <i class="ti-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="gallery-item">
+                            <a href="{% static 'images/gallery-image-8.jpg' %}" data-lightbox="gallery">
+                                <img src="{% static 'images/gallery-image-8.jpg' %}" alt="Gallery Image 8">
+                                <div class="overlay">
+                                    <i class="ti-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="gallery-item">
+                            <a href="{% static 'images/gallery-image-9.jpg' %}" data-lightbox="gallery">
+                                <img src="{% static 'images/gallery-image-9.jpg' %}" alt="Gallery Image 9">
+                                <div class="overlay">
+                                    <i class="ti-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="gallery-item">
+                            <a href="{% static 'images/gallery-image-10.jpg' %}" data-lightbox="gallery">
+                                <img src="{% static 'images/gallery-image-10.jpg' %}" alt="Gallery Image 10">
+                                <div class="overlay">
+                                    <i class="ti-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="gallery-item">
+                            <a href="{% static 'images/gallery-image-11.jpg' %}" data-lightbox="gallery">
+                                <img src="{% static 'images/gallery-image-11.jpg' %}" alt="Gallery Image 11">
+                                <div class="overlay">
+                                    <i class="ti-plus"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="events-image">
+                        <img src="{% static 'images/event-image-1.jpg' %}" alt="Events">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="events-content">
+                        <div class="section-title">
+                            <div class="title-icon">
+                                <img src="{% static 'images/title-flower.svg' %}" alt="Flower">
+                            </div>
+                            <h2>The Plans</h2>
+                        </div>
+
+                        <div class="event-day">
+                            <h3>The Day Before</h3>
+                            <ul>
+                                <li>Event One <span>03:00 PM</span></li>
+                                <li>Event two <span>05:00 PM</span></li>
+                                <li>Event three <span>08:00 PM</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="event-day">
+                            <h3>The Wedding Day</h3>
+                            <ul>
+                                <li>Ceremony <span>03:00 PM</span></li>
+                                <li>Reception <span>05:00 PM</span></li>
+                                <li>Farewell <span>08:00 PM</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="event-day">
+                            <h3>The Day After</h3>
+                            <ul>
+                                <li>Event One <span>07:00 PM</span></li>
+                                <li>Event two <span>09:00 PM</span></li>
+                                <li>Event three <span>10:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script>
+        // Simple countdown timer
+        const weddingDate = new Date('2027-01-07T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown-timer').innerHTML = '<h3>Wedding Day!</h3>';
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

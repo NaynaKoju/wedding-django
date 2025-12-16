@@ -1,0 +1,26 @@
+<section class="bohu-blog section-padding bg-light">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Latest Blog Posts</h2>
+      <p>Updates, inspirations, and tips for your special day.</p>
+    </div>
+    <div class="row">
+      {% for post in blog_posts %}
+      <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-duration="1000ms">
+        <div class="blog-card shadow-sm rounded bg-white">
+          <div class="blog-image">
+            <a href="{% url 'blog_single' slug=post.slug %}">
+              <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid rounded-top">
+            </a>
+          </div>
+          <div class="blog-content p-3">
+            <h5><a href="{% url 'blog_single' slug=post.slug %}">{{ post.title }}</a></h5>
+            <p>{{ post.content|truncatewords:20 }}</p>
+            <a href="{% url 'blog_single' slug=post.slug %}" class="read-more text-decoration-none">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

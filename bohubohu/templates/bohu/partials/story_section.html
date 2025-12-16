@@ -1,0 +1,15 @@
+<section class="story-section section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      {% for story in story_sections %}
+      <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-duration="1000ms">
+        {% if story.image %}
+        <img src="{{ story.image.url }}" alt="{{ story.title }}" class="img-fluid mb-3 rounded">
+        {% endif %}
+        <h4>{{ story.title }}</h4>
+        <p>{{ story.content|safe }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

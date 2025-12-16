@@ -1,0 +1,144 @@
+{% load static %}
+
+<!-- jQuery (required for plugins like Fancybox, Owl, Slick) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.11/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- GSAP Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+
+<!-- WOW.js Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<!-- Custom JS Initialization -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ----------------------------
+    // Scroll Animations (AOS)
+    // ----------------------------
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 1000, once: true });
+    }
+
+    // ----------------------------
+    // WOW.js Animation Initialization
+    // ----------------------------
+    if (typeof WOW !== 'undefined') {
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        }).init();
+    }
+
+    // ----------------------------
+    // GSAP ScrollTrigger
+    // ----------------------------
+    if (typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            gsap.from(el, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none none' }
+            });
+        });
+    }
+
+    // ----------------------------
+    // Mobile menu toggle
+    // ----------------------------
+    const openBtn = document.querySelector('.open-btn');
+    const closeBtn = document.querySelector('.menu-close');
+    const siteNavbar = document.querySelector('.site-navbar');
+
+    if (openBtn) openBtn.addEventListener('click', () => {
+        siteNavbar.classList.add('slideInn');
+        document.querySelector('.page-wrapper').classList.add('body-overlay');
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', () => {
+        siteNavbar.classList.remove('slideInn');
+        document.querySelector('.page-wrapper').classList.remove('body-overlay');
+    });
+
+    // ----------------------------
+    // Cart toggle
+    // ----------------------------
+    const cartToggle = document.querySelector('.cart-toggle-btn');
+    const cartContent = document.querySelector('.mini-cart-content');
+    const cartClose = document.querySelector('.mini-cart-close');
+    if (cartToggle) cartToggle.addEventListener('click', () => {
+        cartContent.classList.toggle('mini-cart-content-toggle');
+    });
+    if (cartClose) cartClose.addEventListener('click', () => {
+        cartContent.classList.remove('mini-cart-content-toggle');
+    });
+
+    // ----------------------------
+    // Initialize Owl Carousel
+    // ----------------------------
+    if (typeof $.fn.owlCarousel !== 'undefined') {
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:30,
+            nav:true,
+            dots:false,
+            autoplay:true,
+            autoplayTimeout:5000,
+            responsive:{
+                0:{ items:1 },
+                768:{ items:2 },
+                992:{ items:3 }
+            }
+        });
+    }
+
+    // ----------------------------
+    // Initialize Fancybox
+    // ----------------------------
+    if (typeof Fancybox !== 'undefined') {
+        Fancybox.bind("[data-fancybox]", { Thumbs: false, Toolbar: true });
+    }
+
+    // ----------------------------
+    // Initialize Odometer counters
+    // ----------------------------
+    document.querySelectorAll('.odometer').forEach(el => {
+        const count = el.getAttribute('data-count');
+        el.innerHTML = 0;
+        setTimeout(() => { el.innerHTML = count; }, 500);
+    });
+
+    // ----------------------------
+    // Hide preloader
+    // ----------------------------
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.preloader');
+        if(preloader) preloader.style.display = 'none';
+    });
+
+});
+
+// NOTE:
+// Global search overlay (#search-form) and its open/close behavior
+// are handled in the base template JS. We keep that logic centralized
+// there so this file focuses on plugins and layout behavior.
+</script>

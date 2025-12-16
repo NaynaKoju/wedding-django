@@ -1,0 +1,55 @@
+{% load widget_tweaks %}
+
+<section class="bohu-rsvp py-5 bg-light" id="rsvp">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+
+        <div class="section-title mb-4">
+          <h2>RSVP</h2>
+          <p>We look forward to celebrating with you! Please confirm your attendance below.</p>
+        </div>
+
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+
+        <form method="post" class="rsvp-form">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            {{ rsvp_form.name.label_tag }}
+            {{ rsvp_form.name|add_class:"form-control" }}
+          </div>
+
+          <div class="mb-3">
+            {{ rsvp_form.email.label_tag }}
+            {{ rsvp_form.email|add_class:"form-control" }}
+          </div>
+
+          <div class="mb-3">
+            {{ rsvp_form.attending.label_tag }}
+            {{ rsvp_form.attending|add_class:"form-select" }}
+          </div>
+
+          <div class="mb-3">
+            {{ rsvp_form.guests.label_tag }}
+            {{ rsvp_form.guests|add_class:"form-control" }}
+          </div>
+
+          <div class="mb-3">
+            {{ rsvp_form.message.label_tag }}
+            {{ rsvp_form.message|add_class:"form-control" }}
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Submit RSVP
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>

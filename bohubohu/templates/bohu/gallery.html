@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Bohu Wedding Planner</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <!-- Page Title -->
+    <section class="wpo-page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="wpo-breadcumb-wrap">
+                        <h2>Gallery</h2>
+                        <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                            <ul class="breadcrumb wpo-breadcumb-wrap trail-items">
+                                <li class="trail-item trail-begin"><a href="{% url 'home' %}" rel="home"><span>Home</span></a></li>
+                                <li class="trail-item trail-end"><span>Gallery</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-1">
+            <img src="{% static 'images/title-shape-1.png' %}" alt="title-shape-1">
+        </div>
+        <div class="shape-2">
+            <img src="{% static 'images/title-shape-2.png' %}" alt="title-shape-2">
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="bohu-gallery wpo-portfolio-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="portfolio-grids gallery-container clearfix portfolio-slide owl-carousel">
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-1.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-1.jpg' %}" alt="gallery-image-1" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-2.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-2.jpg' %}" alt="gallery-image-2" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-3.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-3.jpg' %}" alt="gallery-image-3" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-4.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-4.jpg' %}" alt="gallery-image-4" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-5.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-5.jpg' %}" alt="gallery-image-5" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="img-holder wow fadeInUp" data-wow-duration="1000ms">
+                                <a href="{% static 'images/gallery-image-6.jpg' %}" class="fancybox" data-fancybox-group="gall-1">
+                                    <img src="{% static 'images/gallery-image-6.jpg' %}" alt="gallery-image-6" class="img img-responsive">
+                                    <div class="hover-content">
+                                        <i class="ti-plus"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="wpo-partners-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="partner-grids partners-slider owl-carousel">
+                        <div class="grid">
+                            <img src="{% static 'images/partner-1.png' %}" alt="partner-1">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-2.png' %}" alt="partner-2">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-3.png' %}" alt="partner-3">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-4.png' %}" alt="partner-4">
+                        </div>
+                        <div class="grid">
+                            <img src="{% static 'images/partner-5.png' %}" alt="partner-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

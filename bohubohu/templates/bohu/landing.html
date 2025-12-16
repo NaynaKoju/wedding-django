@@ -1,0 +1,371 @@
+{% extends 'bohu/base.html' %}
+{% load static %}
+
+{% block title %}Bohu - Wedding & Planner{% endblock %}
+
+{% block content %}
+
+<!-- ================= Hero Section with FOREVER Text ================= -->
+<section class="bohu-hero-landing" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{% static 'images/partner-1.jpg' %}');">
+    <div class="container-fluid">
+        <div class="row align-items-center" style="min-height: 90vh;">
+            <div class="col-lg-6">
+                <div class="hero-landing-content">
+                    <!-- Circular "YOU ARE INVITED" Graphic -->
+                    <div class="invited-circle wow fadeInLeftSlow" data-wow-duration="1500ms">
+                        <svg width="200" height="200" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            <text x="100" y="70" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="'DM Sans', sans-serif" font-size="12" font-weight="300">
+                                <textPath href="#circle-path" startOffset="0%">YOU ARE INVITED</textPath>
+                            </text>
+                            <defs>
+                                <path id="circle-path" d="M 100,100 m -95,0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"/>
+                            </defs>
+                            <circle cx="100" cy="100" r="3" fill="rgba(255,255,255,0.6)"/>
+                            <path d="M 100,85 Q 85,100 100,115 Q 115,100 100,85" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Welcome Text -->
+                    <div class="hero-welcome-text wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="200ms">
+                        <p class="welcome-greeting">Hi, Welcome to our Big Day in <strong>June 15, 2026.</strong></p>
+                        <p class="welcome-subtext">Together, let's create a remarkable journey where our dreams become realities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-landing-image">
+                    <h1 class="forever-text wow fadeInRight" data-wow-duration="1500ms">FOREVER</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Couple Section (Three Columns) ================= -->
+<section class="bohu-couple-landing section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left: Amanda Jenny -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="couple-landing-item wow fadeInLeftSlow" data-wow-duration="1400ms">
+                    <div class="couple-landing-image">
+                        <img src="{% static 'images/couple-image-5.jpg' %}" alt="Amanda Jenny" class="img-fluid">
+                    </div>
+                    <div class="couple-landing-text">
+                        <h2 class="couple-name">Amanda Jenny</h2>
+                        <p class="couple-quote">Today, I marry my best friend. With joy in my heart and love in my eyes, I'm ready for forever</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Center: Couple Together -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <div class="couple-landing-center wow zoomIn" data-wow-duration="1700ms">
+                    <img src="{% static 'images/couple-center.jpg' %}" alt="Couple Together" class="img-fluid">
+                </div>
+            </div>
+            
+            <!-- Right: Max Wilson -->
+            <div class="col-lg-3 col-md-6">
+                <div class="couple-landing-item wow fadeInRightSlow" data-wow-duration="1400ms">
+                    <div class="couple-landing-text">
+                        <h2 class="couple-name">Max Wilson</h2>
+                        <p class="couple-quote">A heart full of love and a soul full of hope, I can't wait to begin this journey with you by my side.</p>
+                    </div>
+                    <div class="couple-landing-image">
+                        <img src="{% static 'images/couple-image-4.jpg' %}" alt="Max Wilson" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Quote Section ================= -->
+<section class="bohu-quote-landing section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="quote-content wow fadeInUp" data-wow-duration="1200ms">
+                    <h2 class="quote-main">"You are my today and all of my<br>tomorrows."</h2>
+                    <p class="quote-text">
+                        Your smile is so gentle, yet powerful enough to light up the darkest corners of my
+                        soul. It carries warmth, hope, and a kind of magic the night sky could only dream
+                        of. While stars twinkle far away in the heavens, your smile glows right here beside
+                        me— real, radiant, and made just for my heart to find peace. It's not just beauty I
+                        see; it's love, comfort, and home all at once.
+                    </p>
+                    <div class="quote-decoration">
+                        <svg width="100" height="80" viewBox="0 0 100 80">
+                            <path d="M 50,10 Q 30,20 20,40 Q 10,60 30,70" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M 50,10 Q 70,20 80,40 Q 90,60 70,70" fill="none" stroke="#d4a574" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="25" cy="45" r="2" fill="#d4a574"/>
+                            <circle cx="75" cy="45" r="2" fill="#d4a574"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= Events / Schedule Section ================= -->
+<section class="bohu-events-landing section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <div class="events-image" style="background-image: url('{% static 'images/event-image-1.webp' %}');"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="events-content">
+                    <div class="events-wrapper">
+                        <div class="floral-decoration">
+                            <svg width="60" height="60" viewBox="0 0 60 60">
+                                <path d="M 30,10 Q 20,15 15,25 Q 10,35 20,40 Q 30,45 30,30 Q 30,45 40,40 Q 50,35 45,25 Q 40,15 30,10" fill="none" stroke="#d4a574" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h2 class="events-title">The Plans</h2>
+                        <h3 class="events-subtitle">The Day Before</h3>
+                        <ul class="events-list">
+                            <li><span class="event-name">Event One</span><span class="event-time">03:00 PM</span></li>
+                            <li><span class="event-name">Event two</span><span class="event-time">05:00 PM</span></li>
+                            <li><span class="event-name">Event three</span><span class="event-time">08:00 PM</span></li>
+                        </ul>
+                        <h3 class="events-subtitle mt-5">The Wedding Day</h3>
+                        <ul class="events-list">
+                            <li><span class="event-name">Ceremony</span><span class="event-time">03:00 PM</span></li>
+                            <li><span class="event-name">Reception</span><span class="event-time">05:00 PM</span></li>
+                            <li><span class="event-name">Farewell</span><span class="event-time">08:00 PM</span></li>
+                        </ul>
+                        <h3 class="events-subtitle mt-5">The Day After</h3>
+                        <ul class="events-list">
+                            <li><span class="event-name">Event One</span><span class="event-time">07:00 PM</span></li>
+                            <li><span class="event-name">Event two</span><span class="event-time">09:00 PM</span></li>
+                            <li><span class="event-name">Event three</span><span class="event-time">10:00 PM</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Landing Page Specific Styles */
+.bohu-hero-landing {
+    position: relative;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.invited-circle {
+    margin-bottom: 3rem;
+}
+
+.hero-welcome-text {
+    color: #fff;
+}
+
+.welcome-greeting {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1rem;
+}
+
+.welcome-greeting strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.welcome-subtext {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+.forever-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 12rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    letter-spacing: 0.05em;
+    line-height: 0.9;
+    margin: 0;
+}
+
+/* Couple Landing Section */
+.bohu-couple-landing {
+    background-color: #fff;
+    padding: 120px 0;
+}
+
+.couple-landing-item {
+    text-align: center;
+}
+
+.couple-landing-image {
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.couple-landing-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.couple-landing-item:hover .couple-landing-image img {
+    transform: scale(1.05);
+}
+
+.couple-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.couple-quote {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.couple-landing-center {
+    padding: 2rem;
+}
+
+.couple-landing-center img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Quote Landing Section */
+.bohu-quote-landing {
+    background-color: #fff;
+    padding: 120px 0;
+}
+
+.quote-content {
+    text-align: center;
+}
+
+.quote-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+}
+
+.quote-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.quote-decoration {
+    margin-top: 3rem;
+}
+
+/* Events Landing Section */
+.bohu-events-landing {
+    background-color: #f7f4f1;
+    padding: 0;
+}
+
+.events-content {
+    padding: 100px 60px;
+    background-color: #f7f4f1;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.events-wrapper {
+    max-width: 500px;
+}
+
+.floral-decoration {
+    margin-bottom: 2rem;
+}
+
+.events-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.events-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.event-name {
+    color: #333;
+    font-size: 1rem;
+}
+
+.event-time {
+    color: #666;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .forever-text {
+        font-size: 6rem;
+    }
+    
+    .quote-main {
+        font-size: 2.5rem;
+    }
+    
+    .events-content {
+        padding: 60px 30px;
+    }
+}
+</style>
+{% endblock %}
